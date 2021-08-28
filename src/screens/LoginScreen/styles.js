@@ -4,24 +4,44 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        position: 'relative',
-        width: wp('100%'),
-        height: hp('100%'),
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+
+        paddingBottom: 48,
+        paddingLeft: 16,
+        paddingRight: 16,
 
         backgroundColor: '#FFFFFF'
     },
     navigator_bar:{
         display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        width: '100%',
+        paddingTop: '10%'
+    },
+    logo_frame:{
+        height: 40,
+        display: 'flex',
+        width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
-        paddingVertical: 13,
-        paddingHorizontal: 16,
-
+        padding: 0,
+        marginBottom: 12
+    },
+    mdoc_icon:{
+        marginRight: 12,
+    },
+    info_text:{
         position: 'relative',
-        width: wp('100%'),
-        height: hp('10%'),
-        left: 0,
-        top: 40,
+        
+        fontFamily: 'SF Pro Text',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 20,
+        lineHeight: 35,
+        color: '#A0A0A0',
     },
     back_icon:{
         position: 'relative',
@@ -31,23 +51,21 @@ const styles = StyleSheet.create({
         top: 13,
     },
     title_area: {
-
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'flex-start',
-        paddingVertical: 10,
-        paddingHorizontal: 16,
+        justifyContent: 'center',
+        alignItems: 'center',
+        // paddingVertical: 0,
+        // paddingHorizontal: 16,
 
         position: 'relative',
-        width: wp('100%'),
-        height: hp('45%'),
-        left: 0,
-        top: hp('20%'),
-        marginHorizontal: wp('2%'),
+        width: '100%',
+        height: '100%',
+        position: 'relative',
     },
 
     text_frame:{
-
+        
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -55,19 +73,12 @@ const styles = StyleSheet.create({
         padding: 0,
 
         position: 'relative',
-        width: wp('90%'),
-        height: hp('10%'),
-        // left: 0,
-        top: 0,
+        width: '100%',
     },
 
     login_main:{
         position: 'relative',
-        width: wp('90%'),
-        height: hp('10%'),
-        // left: 0,
-        top: 0,
-        
+
         fontFamily: 'SF Pro Text',
         fontStyle: 'normal',
         fontWeight: 'bold',
@@ -75,21 +86,12 @@ const styles = StyleSheet.create({
         lineHeight: 35,
         color: '#323232',
 
-        // flex: 'none',
-        // order: 0,
         alignSelf: 'stretch',
         flexGrow: 0,
-        // marginVertical: 8,
-        // marginHorizontal: 0
-
     },
     login_sub:{
         position: 'relative',
-        width: wp('90%'),
-        height: hp('10%'),
-        left: 0,
-        top: 0,
-        
+        width: '100%',
         fontFamily: 'SF Pro Text',
         fontStyle: 'normal',
         fontWeight: 'normal',
@@ -97,12 +99,8 @@ const styles = StyleSheet.create({
         lineHeight: 35,
         color: '#A0A0A0',
 
-        // flex: 'none',
-        // order: 2,
         alignSelf: 'stretch',
         flexGrow: 0,
-        // marginVertical: 8,
-        // marginHorizontal: 0
     },
     login_frame:{
         display: 'flex',
@@ -120,7 +118,7 @@ const styles = StyleSheet.create({
         // order: 1,
         alignSelf: 'stretch',
         flexGrow: 0,
-        marginVertical: 24,
+        marginVertical: 12,
         marginHorizontal: 0,
 
     },
@@ -131,10 +129,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         paddingVertical: 6,
-        paddingHorizontal: 16,
+        // spaddingHorizontal: 16,
 
         position: 'relative',
-        width: wp('90%'),
+        width: '100%',
         height: 44,
         left: 0,
         top: 0,
@@ -155,8 +153,7 @@ const styles = StyleSheet.create({
     },
     hint_txt:{
         position: 'relative',
-        width: wp('20%'),
-        height: 24,
+        width: 70,
         // left: 16,
         // top: 10,
         
@@ -171,15 +168,12 @@ const styles = StyleSheet.create({
         // order: 0,
         flexGrow: 0,
         marginVertical: 0,
-        marginHorizontal: 12,
+        marginLeft: 12,
     },
     input_txt:{
         position: 'relative',
-        width: wp('20%'),
         height: 24,
-        // left: 16,
-        // top: 10,
-        
+
         fontFamily: 'SF Pro Text',
         fontStyle: 'normal',
         fontWeight: 'normal',
@@ -194,34 +188,43 @@ const styles = StyleSheet.create({
         marginHorizontal: 12,
     },
     button_area:{
-        display: 'flex',
         flexDirection: 'row',
+        justifyContent:'center',
+        alignItems: 'center',
+        marginTop: 12,
+        width: '100%',
+        flex: 0,
+    },
+    btn_login:{
+        display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         paddingVertical: 6,
         paddingHorizontal: 16,
         
         position: 'relative',
-        width: 91,
         height: 44,
-        top: 10,
-
         backgroundColor: '#3C64E6',
         opacity: 0.3,
         borderRadius: 22,
+    },
+    find_passward_text:{
+        position: 'relative',
+        fontFamily: 'Apple SD Gothic Neo',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: 14,
+        lineHeight: 25,
+        color: '#3C64E6',
+        textDecorationLine: 'underline',
+        flex: 1,
         
-        // flex: 'none',
-        // order: 1,
-        flexGrow: 0,
-        marginVertical: 12,
-        marginHorizontal: 0,
     },
     button_text:{
         position: 'relative',
         width: 80,
         height: 24,
-        // left: 16,
-        // top: 10,
         
         fontFamily: 'SF Pro Text',
         fontStyle: 'normal',
@@ -231,11 +234,8 @@ const styles = StyleSheet.create({
         color: '#ffffff',
         textAlign: 'center',
 
-        // flex: 'none',
-        // order: 0,
         flexGrow: 0,
         marginVertical: 0,
-        marginHorizontal: 10,
 
     }
 

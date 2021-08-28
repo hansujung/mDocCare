@@ -4,7 +4,7 @@ import {
     Text,
     TextInput,
     TouchableOpacity,
-    StyleSheet
+    Image
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
@@ -32,9 +32,18 @@ export default class LoginScreen extends Component{
                 </View>
                 <View style={styles.title_area}>
                     <View style={styles.text_frame}>
-                    
+                        <View style={styles.logo_frame}>
+                            <Image
+                                style={styles.mdoc_icon}
+                                source={require('../../../assets/images/logo-m.png')}
+                            />
+                            <Text style={styles.info_text}>
+                                환자•보호자{'\n'}
+                            </Text>
+
+                        </View>
                         <Text style={styles.login_main}>
-                            환자•보호자 로그인{'\n'}
+                                환자•보호자 로그인{'\n'}
                             <Text style={styles.login_sub}>
                                 의료진으로부터 전달받으신 안내문서에 기재되어있습니다.
                             </Text>
@@ -59,8 +68,11 @@ export default class LoginScreen extends Component{
                                 placeholder={"ex. ••••••••"}/>
                         </View>
                         <View style={styles.button_area}>
+                            <Text style={styles.find_passward_text}>
+                                비밀번호를 잊으셨나요?
+                            </Text>
                             <TouchableOpacity 
-                                style={styles.buttonPassword}
+                                style={styles.btn_login}
                                 onPress={this._doLogin.bind(this)}>
                                 <Text style={styles.button_text}>시작하기</Text>
                             </TouchableOpacity>
